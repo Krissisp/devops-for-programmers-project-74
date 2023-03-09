@@ -1,0 +1,10 @@
+version: '1'
+ 
+services:
+  app:
+    environment: {}
+    ports:
+      - "0.0.0.0:8080:8080"
+    volumes:
+      - ./app:/app
+    command: npm run dev
