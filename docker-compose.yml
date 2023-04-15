@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    image: devops-for-programmers-project-74
+    image: krissisp/devops-for-programmers-project-74
     volumes:
       - ./app:/app
     command: npm run dev
