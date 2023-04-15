@@ -3,6 +3,7 @@ version: '1'
 services:
   app:
     environment: {}
+    dockerfile: Dockerfile
     ports:
       - "0.0.0.0:8080:8080"
     volumes:
