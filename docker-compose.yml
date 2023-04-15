@@ -3,7 +3,8 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
+    image: devops-for-programmers-project-74
     volumes:
       - ./app:/app
-    command: npm test
+    command: npm run dev
