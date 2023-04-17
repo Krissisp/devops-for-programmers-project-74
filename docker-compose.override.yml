@@ -2,10 +2,11 @@ version: '1'
  
 services:
   app:
-    environment: {}
-    dockerfile: Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "0.0.0.0:8080:8080"
     volumes:
       - ./app:/app
-    command: npm run dev
+    command: npm run test
