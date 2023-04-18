@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/devops-for-programmers-project-74:latest
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/devops-for-programmers-project-74
 
 jobs:
   build:
@@ -34,4 +34,4 @@ jobs:
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}
           cache-to: type=inline
           push: true
-          tags: ${{ env.APP_IMAGE_NAME }}
+          tags: latest
