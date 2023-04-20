@@ -10,8 +10,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    image: krissisp/devops-for-programmers-project-74
-    command: npm run test
+    volumes:
+      - ".env.example:/app/.env"
+    command:  ["npm", "test"]
     depends_on:
       - db
 
