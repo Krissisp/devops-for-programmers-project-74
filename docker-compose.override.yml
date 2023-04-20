@@ -10,3 +10,20 @@ services:
     volumes:
       - ./app:/app
     command: npm run dev
+
+  caddy:
+    image: caddy:2.6.4-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+
+volumes:
+  caddy_data:
+  caddy_config:
